@@ -183,4 +183,17 @@ if(title && !title.querySelector("span")){
     });
   }
 
+    // ======================
+// MOBILE MENU TOGGLE
+// ======================
+const mobileMenu = document.getElementById("mobile-menu");
+const navLinks = document.getElementById("navLinks");
+
+if(mobileMenu && navLinks){
+  mobileMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
+
 });
+
