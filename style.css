@@ -368,13 +368,46 @@ input:focus { border-color: var(--primary); outline: none; }
 
 /* --- MOBILE RESPONSIVE --- */
 @media (max-width: 991px) {
-    .grid-2 { grid-template-columns: 1fr; gap: 50px; }
-    .swap-mobile .feature-text { order: 2; }
-    .swap-mobile .feature-image { order: 1; }
-    .nav-links { display: none; } /* Nanti pakai JS */
-    .grid-form { grid-template-columns: 1fr; }
-    .hero-text-box h1 { font-size: 3.5rem; }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: var(--dark-soft);
+        flex-direction: column;
+        padding: 100px 30px;
+        gap: 25px;
+        transition: 0.4s ease;
+        display: flex;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: var(--white);
+        display: block;
+        transition: 0.3s;
+    }
+
+    .nav-extra .social-icon {
+        display: none;
+    }
 }
+
 
 /* --- MAPS SECTION --- */
 .maps-section { background: var(--dark-soft); padding-bottom: 100px; }
@@ -575,3 +608,19 @@ html {
 .hero-text-box h1 span {
   color: #48C9B0;
 }
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 150px 0 100px;
+    }
+
+    .hero-text-box h1 {
+        font-size: 32px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+}
+
