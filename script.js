@@ -189,11 +189,13 @@ if(title && !title.querySelector("span")){
 const mobileMenu = document.getElementById("mobile-menu");
 const navLinks = document.getElementById("navLinks");
 
-if(mobileMenu && navLinks){
-  mobileMenu.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+if (mobileMenu && navLinks) {
+  mobileMenu.addEventListener("click", function () {
+    navLinks.classList.toggle("show");
   });
 }
 
+
 });
+
 
