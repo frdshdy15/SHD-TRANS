@@ -370,22 +370,19 @@ input:focus { border-color: var(--primary); outline: none; }
 @media (max-width: 991px) {
 
     .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 250px;
-        height: 100vh;
-        background: var(--dark-soft);
+        display: none;
         flex-direction: column;
-        padding: 100px 30px;
-        gap: 25px;
-        transition: 0.4s ease;
-        display: flex;
-        z-index: 999;
+        background: var(--dark);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
     }
 
-    .nav-links.active {
-        right: 0;
+    .nav-links.show {
+        display: flex;
     }
 
     .menu-toggle {
@@ -398,9 +395,7 @@ input:focus { border-color: var(--primary); outline: none; }
     .menu-toggle span {
         width: 25px;
         height: 3px;
-        background: var(--white);
-        display: block;
-        transition: 0.3s;
+        background: white;
     }
 
     .nav-extra .social-icon {
@@ -610,17 +605,26 @@ html {
 }
 
 @media (max-width: 768px) {
-    .hero {
-        height: auto;
-        padding: 150px 0 100px;
-    }
 
-    .hero-text-box h1 {
-        font-size: 32px;
-    }
+  .hero {
+    height: auto;
+    padding: 140px 0 80px;
+  }
 
-    .hero-actions {
-        flex-direction: column;
-    }
+  .hero-bg img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-text-box h1 {
+    font-size: 28px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
+
+
 
