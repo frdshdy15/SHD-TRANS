@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SHD TRANS | Official Premium Transport</title>
+    
+    <meta name="description" content="Sewa Jetbus 3+ HDD Adiputro Premium. Partner perjalanan terbaik Anda di JABODETABEK.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Critical Preloader CSS */
+        #loading-screen {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #0f1418; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; z-index: 99999;
+        }
+        .loader-logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800; color: #fff; font-size: 2.5rem; letter-spacing: 5px;
+            opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s forwards;
+        }
+        .loader-logo span { color: #48C9B0; }
+        .enter-btn {
+            margin-top: 30px; padding: 15px 40px; background: #48C9B0;
+            border: none; border-radius: 50px; font-weight: 800; cursor: pointer;
+            opacity: 0; transition: 0.5s; display: none;
+        }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="is-loading">
+
+    <div id="loading-screen">
+        <div class="loader-logo">SHD<span>TRANS</span></div>
+        <div class="progress-bar-container">
+            <div class="progress-fill"></div>
+        </div>
+        <button id="startExperience" class="enter-btn">MASUK KE SITUS</button>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand">SHD<span>TRANS</span></a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#unit">Detail Unit</a></li>
+                <li><a href="#features">Fasilitas</a></li>
+                <li><a href="#stats">Eksistensi</a></li>
+                <li><a href="#booking" class="btn-cta">Booking Sekarang</a></li>
+            </ul>
+
+            <div class="nav-extra">
+                <a href="https://www.instagram.com/sahabat.babygirl01/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@sahabat.babygirl01" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <button class="menu-toggle" id="mobile-menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="1.jpg" alt="SHD Trans Hero">
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text-box" data-aos="fade-right">
+                <span class="tagline">Your Travel Companion</span>
+                <h1>Siap menemani <span>Perjalanan Anda</span></h1>
+                <p>Menghadirkan Jetbus 3+ HDD Adiputro untuk kenyamanan perjalanan Anda.</p>
+                <div class="hero-actions">
+                    <a href="#booking" class="main-btn">Mulai Reservasi</a>
+                    <a href="#unit" class="outline-btn">Lihat Unit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="unit" class="section unit-detail">
+        <div class="container grid-2">
+            <div class="unit-image" data-aos="zoom-in">
+                <img src="2.jpg" alt="Unit JB3+">
+                <div class="image-floating-card">
+                    <strong>Sahabat Baby Girl</strong>
+                    <p>Jetbus 3+ HDD</p>
+                </div>
+            </div>
+            <div class="unit-info" data-aos="fade-left">
+                <span class="sub-title">Spesifikasi Unit</span>
+                <h2>Performa Mesin <span>Hino RK8</span></h2>
+                <p>Kami menggunakan basis sasis Hino RK8 R260 yang tangguh dan nyaman, dibalut dengan bodi High Deck Double Glass (HDD) yang memberikan pandangan luas bagi penumpang.</p>
+                
+                <div class="spec-list">
+                    <div class="spec-item">
+                        <i class="fas fa-bus"></i>
+                        <div>
+                            <h4>Tipe Bodi</h4>
+                            <p>Jetbus 3+ HDD (Adiputro)</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-couch"></i>
+                        <div>
+                            <h4>Konfigurasi Seat</h4>
+                            <p>Opsi 2-2 (Executive) atau 2-3 (59 Seats)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section features-dark">
+        <div class="container grid-2 swap-mobile">
+            <div class="feature-text" data-aos="fade-up">
+                <h2>Fasilitas <span>Bintang Lima</span></h2>
+                <ul class="feature-pills">
+                    <li><i class="fas fa-check"></i> Full AC & Audio Video System</li>
+                    <li><i class="fas fa-check"></i> Bagasi Luas</li>
+                    <li><i class="fas fa-check"></i> Dispenser</li>
+                    <li><i class="fas fa-check"></i> Basuri Horn</li>
+                    <li><i class="fas fa-check"></i> Double Glass View</li>
+                    <li><i class="fas fa-check"></i> Reclining Seat Comfort</li>
+                </ul>
+            </div>
+            <div class="feature-image" data-aos="fade-down">
+                <img src="3.jpg" alt="Fasilitas Bus">
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="counter" data-target="2000">0</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="counter" data-target="1500">0</h3>
+                    <p>Trips Completed</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>Support Service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking-section">
+        <div class="booking-overlay-img">
+            <img src="4.jpg" alt="Booking Background">
+        </div>
+        <div class="container">
+            <div class="booking-card" data-aos="flip-up">
+                <div class="form-header">
+                    <h2>Reservasi Online</h2>
+                    <p>Silakan lengkapi data, sistem kami akan menyusun pesan otomatis ke WhatsApp.</p>
+                </div>
+                <form id="bookingForm" class="grid-form">
+                    <div class="field">
+                        <label>Nama Lengkap *</label>
+                        <input type="text" id="nama" required placeholder="Masukkan nama Anda">
+                    </div>
+                    <div class="field">
+                        <label>Titik Penjemputan *</label>
+                        <input type="text" id="jemput" required placeholder="Contoh: Depok / Parung">
+                    </div>
+                    <div class="field">
+                        <label>Tujuan Perjalanan *</label>
+                        <input type="text" id="tujuan" required placeholder="Contoh: Jogja / Bali">
+                    </div>
+                    <div class="field">
+                        <label>Tanggal & Jam *</label>
+                        <div class="sub-grid">
+                            <input type="date" id="tgl" required>
+                            <input type="time" id="jam" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Opsi Kursi *</label>
+                        <select id="seat" required>
+                            <option value="">-- Pilih Konfigurasi --</option>
+                            <option value="2-2 (Executive Class)">2-2 (Executive Class)</option>
+                            <option value="2-3 (59 Seat Capacity)">2-3 (59 Seat Capacity)</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Keperluan *</label>
+                        <select id="keperluan" required>
+                            <option value="">-- Pilih Keperluan --</option>
+                            <option value="Pariwisata / Tour">Pariwisata / Tour</option>
+                            <option value="Ziarah / Perjalanan Religi">Ziarah / Perjalanan Religi</option>
+                            <option value="Kunjungan Industri / Dinas">Kunjungan Industri / Dinas</option>
+                            <option value="Antar Jemput / Drop-off">Antar Jemput / Drop-off</option>
+                            <option value="Acara Penanahan / Keluarga">Acara Pernikahan / Keluarga</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Kirim Via WhatsApp</span>
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="section maps-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 50px;">
+                <span class="sub-title">Lokasi Operasional</span>
+                <h2>Area Parung <span>& Sekitarnya</span></h2>
+                <div class="line" style="width: 80px; height: 4px; background: var(--primary); margin: 0 auto 20px;"></div>
+            </div>
+            
+            <div class="map-wrapper" data-aos="zoom-in">
+               <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.132644265439!2d106.7262176!3d-6.3768341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e4ce89071063%3A0x6b489e987c14d193!2sParung%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
+    width="100%" 
+    height="450" 
+    style="border:0; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);" 
+    allowfullscreen="" 
+    loading="lazy">
+</iframe>
+                
+                <div class="map-info-card">
+                    <h4>Pusat Operasional</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Parung - Depok, Jawa Barat</p>
+                    <p><i class="fas fa-clock"></i> Layanan 24 Jam (Reservasi)</p>
+                    <a href="https://wa.me/6281314444786" class="map-link">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 SHD TRANS - Your travel companion.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+    // FUNGSI PAKSA: Tombol akan muncul dalam 2 detik meski gambar belum keload
+    setTimeout(() => {
+        const btn = document.getElementById('startExperience');
+        const fill = document.querySelector('.progress-fill');
+        if(btn) {
+            btn.style.display = 'block';
+            btn.style.opacity = '1';
+        }
+        if(fill) {
+            fill.style.width = '100%';
+            fill.style.left = '0';
+            fill.style.animation = 'none';
+        }
+    }, 2000); 
+
+    // Klik untuk masuk
+    document.getElementById('startExperience').addEventListener('click', function() {
+        document.getElementById('loading-screen').style.display = 'none';
+        document.body.classList.remove('is-loading');
+        // Trigger AOS manual
+        if (typeof AOS !== 'undefined') {
+            AOS.init();
+        }
+    });
+</script>
+
+</body>
+</html>
