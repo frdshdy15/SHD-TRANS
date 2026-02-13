@@ -368,41 +368,93 @@ input:focus { border-color: var(--primary); outline: none; }
 
 /* --- MOBILE RESPONSIVE --- */
 @media (max-width: 991px) {
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: var(--dark);
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        padding: 20px 0;
-        text-align: center;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        cursor: pointer;
-    }
-
-    .menu-toggle span {
-        width: 25px;
-        height: 3px;
-        background: white;
-    }
-
-    .nav-extra .social-icon {
-        display: none;
-    }
+    .grid-2 { grid-template-columns: 1fr; gap: 50px; }
+    .swap-mobile .feature-text { order: 2; }
+    .swap-mobile .feature-image { order: 1; }
+    .nav-links { display: none; } /* Nanti pakai JS */
+    .grid-form { grid-template-columns: 1fr; }
+    .hero-text-box h1 { font-size: 3.5rem; }
 }
 
+/* --- GLOBAL FIX UNTUK MOBILE --- */
+html, body {
+    overflow-x: hidden; /* Mencegah scroll ke samping */
+    width: 100%;
+    position: relative;
+}
+
+/* --- PERBAIKAN NAVBAR MOBILE --- */
+.menu-toggle {
+    display: flex; /* Munculkan tombol menu di HP */
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    transition: 0.3s;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px; /* Perkecil padding samping agar muat */
+    }
+
+    .hero-text-box h1 {
+        font-size: 2.5rem !important; /* Kecilkan font judul di HP */
+        line-height: 1.2;
+    }
+
+    .hero-actions {
+        flex-direction: column; /* Tombol jadi tumpuk atas-bawah */
+        gap: 15px;
+    }
+
+    .grid-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Fix image floating card biar gak nabrak tepi layar */
+    .image-floating-card {
+        bottom: 10px;
+        right: 10px;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    /* Stats Section Fix */
+    .stats-grid {
+        grid-template-columns: 1fr; /* Tumpuk ke bawah */
+        gap: 40px;
+    }
+
+    .stat-card h3 {
+        font-size: 2.5rem;
+    }
+
+    /* Booking Card Fix */
+    .booking-card {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .sub-grid {
+        grid-template-columns: 1fr; /* Form tanggal & jam tumpuk */
+    }
+    
+    /* Hilangkan kursor custom di HP karena ganggu sentuhan jari */
+    .custom-cursor {
+        display: none !important;
+    }
+}  
 
 /* --- MAPS SECTION --- */
 .maps-section { background: var(--dark-soft); padding-bottom: 100px; }
@@ -603,28 +655,3 @@ html {
 .hero-text-box h1 span {
   color: #48C9B0;
 }
-
-@media (max-width: 768px) {
-
-  .hero {
-    height: auto;
-    padding: 140px 0 80px;
-  }
-
-  .hero-bg img {
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .hero-text-box h1 {
-    font-size: 28px;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-
-
