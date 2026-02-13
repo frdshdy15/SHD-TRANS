@@ -183,19 +183,15 @@ if(title && !title.querySelector("span")){
     });
   }
 
-    // ======================
-// MOBILE MENU TOGGLE
-// ======================
-const mobileMenu = document.getElementById("mobile-menu");
-const navLinks = document.getElementById("navLinks");
+  // Toggle Menu Mobile
+const menuToggle = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('navLinks');
 
-if (mobileMenu && navLinks) {
-  mobileMenu.addEventListener("click", function () {
-    navLinks.classList.toggle("show");
-  });
+if(menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        // Tambahkan CSS untuk .nav-links.active di style.css agar muncul
+    });
 }
 
-
 });
-
-
