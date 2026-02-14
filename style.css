@@ -400,6 +400,35 @@ html, body {
     transition: 0.3s;
 }
 
+.nav-links {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Sembunyi di kanan layar */
+        width: 70%;
+        height: 100vh;
+        background: rgba(15, 20, 24, 0.98);
+        backdrop-filter: blur(15px);
+        padding: 100px 40px;
+        transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        right: 0; /* Muncul ke layar saat tombol diklik */
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        display: block;
+    }
+
 /* --- RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 768px) {
     .container {
@@ -654,4 +683,129 @@ html {
 
 .hero-text-box h1 span {
   color: #48C9B0;
+}
+
+@media (max-width: 768px) {
+    /* 1. Paksa Container Form agar tidak meluber (Sekitar baris 335) */
+    .booking-card {
+        padding: 30px 15px !important; /* Kurangi padding dari 60px ke 15px */
+        margin: 0 10px;               /* Beri jarak sedikit dari dinding layar HP */
+        width: auto !important;        /* Biar fleksibel mengikuti lebar layar */
+        max-width: 100%;
+    }
+
+    /* 2. Ubah Grid Form jadi satu kolom (Sekitar baris 331) */
+    .grid-form {
+        grid-template-columns: 1fr !important; /* Paksa jadi 1 kolom saja */
+        gap: 20px !important;                 /* Perkecil jarak antar input */
+    }
+
+    /* 3. Pastikan semua field lebarnya full (Baris tambahan) */
+    .field, .field.full {
+        grid-column: span 1 !important;
+        width: 100%;
+    }
+
+    /* 4. Perbaiki input agar tidak keluar batas (Baris tambahan) */
+    input, select, textarea {
+        width: 100% !important;
+        box-sizing: border-box; /* Pastikan padding input tidak menambah lebar */
+    }
+
+    /* 5. Tanggal dan Jam harus tumpuk vertikal di HP */
+    .sub-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+    }
+
+    /* 6. Tombol Kirim WA agar pas di layar */
+    .submit-btn {
+        grid-column: span 1 !important;
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+.nav-extra {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(72, 201, 176, 0.3);
+    border-radius: 50%;
+    color: var(--primary);
+    font-size: 20px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: var(--primary);
+    color: var(--dark);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--primary-glow);
+}
+
+/* Khusus Mobile Medsos */
+@media (max-width: 768px) {
+    .social-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+}
+
+.wa-float-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    z-index: 9999;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.wa-float-fixed:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .wa-float-fixed span { display: none; } /* Di HP cuma muncul icon biar ga sempit */
+    .wa-float-fixed {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        justify-content: center;
+        padding: 0;
+    }
+}
+
+/* Animasi Hamburger ke Silang */
+.menu-toggle.is-active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.is-active span:nth-child(2) {
+    transform: translateY(-2px) rotate(-45deg);
+}
+
+/* Tambahkan sedikit transisi di span menu-toggle (Cari baris .menu-toggle span) */
+.menu-toggle span {
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
