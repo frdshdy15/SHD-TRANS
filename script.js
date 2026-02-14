@@ -183,15 +183,37 @@ if(title && !title.querySelector("span")){
     });
   }
 
-  // Toggle Menu Mobile
-const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.getElementById('navLinks');
+  // 2. MOBILE MENU TOGGLE (Fungsi Buka & Tutup)
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('navLinks');
 
-if(menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        // Tambahkan CSS untuk .nav-links.active di style.css agar muncul
+    if(menuToggle) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Biar gak bentrok dengan event lain
+            navLinks.classList.toggle('active');
+            
+            // Animasi tombol hamburger jadi silang (X)
+            menuToggle.classList.toggle('is-active');
+        });
+    }
+
+    // Klik di luar menu untuk menutup
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && e.target !== menuToggle) {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('is-active');
+        }
     });
-}
+
+    // Tutup menu kalau salah satu link diklik
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('is-active');
+        });
+    });
+
+
 
 });
+
